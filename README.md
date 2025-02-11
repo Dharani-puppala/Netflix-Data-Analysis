@@ -20,6 +20,7 @@ The data for this project is sourced from the Kaggle dataset:
 
 ## Schema
     - To find the length of indivial  columns use =MAX(LEN(COL1:COLN)) CNTRL+SHIFT+ENTER
+    
 ```sql
 DROP TABLE IF EXISTS netflix;
 CREATE TABLE netflix
