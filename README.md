@@ -19,7 +19,7 @@ The data for this project is sourced from the Kaggle dataset:
 - **Dataset Link:** [Movies Dataset](https://www.kaggle.com/datasets/shivamb/netflix-shows?resource=download)
 
 ## Schema
-
+    - To find the length of indivial  columns use =MAX(LEN(COL1:COLN)) CNTRL+SHIFT+ENTER
 ```sql
 DROP TABLE IF EXISTS netflix;
 CREATE TABLE netflix
