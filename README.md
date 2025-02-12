@@ -53,7 +53,7 @@ CREATE TABLE netflix(
 10. Find each year and the average numbers of content release in India on netflix, return top 5 year with highest avg content release!
 11. List all movies that are documentaries
 12. Find all content without a director
-13. Find how many movies actor 'Salman Khan' appeared in last 10 years!
+13. Find how many movies actor 'John Cleese' appeared in last 10 years!
 14. Find the top 10 actors who have appeared in the highest number of movies produced in India.
 15. Categorize the content based on the presence of the keywords 'kill' and 'violence' in the description field. Label content containing these keywords as 'Bad' and all other content as 'Good'. Count how many items fall into each category.
 
@@ -202,13 +202,11 @@ WHERE director IS NULL;
 
 **Objective:** List content that does not have a director.
 
-### 13. Find How Many Movies Actor 'Salman Khan' Appeared in the Last 10 Years
+### 13. Find How Many Movies Actor 'John Cleese' Appeared in the Last 10 Years
 
 ```sql
-SELECT * 
-FROM netflix
-WHERE casts LIKE '%Salman Khan%'
-  AND release_year > EXTRACT(YEAR FROM CURRENT_DATE) - 10;
+SELECT * FROM netflix
+WHERE casts ILIKE('%John Cleese%') AND release_year >EXTRACT(YEAR FROM CURRENT_DATE) - 10
 ```
 
 **Objective:** Count the number of movies featuring 'Salman Khan' in the last 10 years.
