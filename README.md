@@ -138,17 +138,11 @@ WHERE TO_DATE(date_added, 'Month DD, YYYY') >= CURRENT_DATE - INTERVAL '5 years'
 
 **Objective:** Retrieve content added to Netflix in the last 5 years.
 
-### 7. Find All Movies/TV Shows by Director 'Rajiv Chilaka'
+### 7. Find All Movies/TV Shows by Director 'Yoshiyuki Tomino'
 
 ```sql
-SELECT *
-FROM (
-    SELECT 
-        *,
-        UNNEST(STRING_TO_ARRAY(director, ',')) AS director_name
-    FROM netflix
-) AS t
-WHERE director_name = 'Rajiv Chilaka';
+SELECT* FROM netflix
+WHERE  director LIKE'%Yoshiyuki Tomino%'
 ```
 
 **Objective:** List all content directed by 'Rajiv Chilaka'.
