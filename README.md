@@ -142,7 +142,7 @@ WHERE TO_DATE(date_added, 'Month DD, YYYY') >= CURRENT_DATE - INTERVAL '5 years'
 
 ```sql
 SELECT* FROM netflix
-WHERE  director LIKE'%Yoshiyuki Tomino%'
+WHERE  director ILIKE'%Yoshiyuki Tomino%'
 ```
 
 **Objective:** List all content directed by 'Rajiv Chilaka'.
