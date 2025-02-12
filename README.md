@@ -110,17 +110,10 @@ WHERE release_year = 2020;
 ### 4. Find the Top 5 Countries with the Most Content on Netflix
 
 ```sql
-SELECT * 
-FROM
-(
-    SELECT 
-        UNNEST(STRING_TO_ARRAY(country, ',')) AS country,
-        COUNT(*) AS total_content
-    FROM netflix
-    GROUP BY 1
-) AS t1
-WHERE country IS NOT NULL
-ORDER BY total_content DESC
+SELECT UNNEST(STRING_TO_ARRAY(country,',')) as new_country , COUNT(*) AS new_count
+FROM netflix
+GROUP BY new_country
+ORDER BY new_count DESC
 LIMIT 5;
 ```
 
